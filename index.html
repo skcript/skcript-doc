@@ -20,7 +20,6 @@ layout: default
     <h3>Important</h3>
     <p>Each app extension you create matches exactly one of the extension points listed in Table 1-1. You don’t create a generic extension that matches more than one extension point.</p>
 </div>
-
 <div class="row m-t-20">
     <div class="col-sm-12">
         <h4 class="Pre--Title">Sending emails</h4>
@@ -30,17 +29,17 @@ layout: default
         <p class="Pre--Content">
         This can be as simple as:
         </p>
-                <pre class="m-t-20">
-                    <code>
-                    class Notifier &lt; ActionMailer::Base
-                      default from: &#39;system@loudthinking.com&#39;
-                        def welcome(recipient)
-                        @recipient = recipient
-                          mail(to: recipient,
-                          subject: &quot;[Signed up] Welcome #{recipient}&quot;)
-                      end
-                    end
-                    </code>
+<pre class="m-t-20">
+<code>
+ class Notifier &lt; ActionMailer::Base
+  default from: &#39;system@loudthinking.com&#39;
+    def welcome(recipient)
+    @recipient = recipient
+      mail(to: recipient,
+      subject: &quot;[Signed up] Welcome #{recipient}&quot;)
+    end
+ end
+</code>
 </pre>
         <p class="Pre--Content m-t-20">
         The body of the email is created by using an Action View template (regular
@@ -59,17 +58,17 @@ layout: default
         So the corresponding body template for the method above could look like
         this:
         </p>
-                <pre class="m-t-20">
-                    <code>
-                    class Notifier &lt; ActionMailer::Base
-                      default from: &#39;system@loudthinking.com&#39;
-                        def welcome(recipient)
-                        @recipient = recipient
-                          mail(to: recipient,
-                          subject: &quot;[Signed up] Welcome #{recipient}&quot;)
-                      end
-                    end
-                    </code>
+<pre class="m-t-20">
+<code>
+ class Notifier &lt; ActionMailer::Base
+   default from: &#39;system@loudthinking.com&#39;
+     def welcome(recipient)
+     @recipient = recipient
+       mail(to: recipient,
+       subject: &quot;[Signed up] Welcome #{recipient}&quot;)
+   end
+ end
+</code>
 </pre>
     </div>
 </div>
@@ -92,3 +91,83 @@ layout: default
         </ul>
     </div>
 </div>
+
+<div class="row m-t-20">
+    <div class="col-sm-12">
+        <h4 class="Pre--Title">There Are Several Types of App Extensions</h4>
+        <p class="Pre--Content">
+            iOS and OS X define several types of app extensions, each of which is tied to an area of the system, such as sharing, Notification Center, and the iOS keyboard. A system area that supports extensions is called an extension point. Each extension point defines usage policies and provides APIs that you use when you create an extension for that area. You choose an extension point to use based on the functionality you want to provide.
+        </p>
+        <div class="notes info-note">
+            <h3>Software update</h3>
+            <p>
+                Table 1-1 lists the extension points in iOS and OS X and gives an example of tasks you might enable in an app extension for each extension point.
+            </p>
+        </div>
+
+        <div class="Document--Table">
+            <table class="graybox">
+                <caption class="tablecaption"><strong>Table 1-1</strong> Extension points in iOS and OS X</caption>
+                <thead>
+                    <tr>
+                        <th class="TableHeading--TableRow--TableCell">
+                            <p class="para">Extension point</p>
+                        </th>
+                        <th class="TableHeading--TableRow--TableCell">
+                            <p class="para">Typical app extension functionality</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="para">
+                              Today (iOS and OS&nbsp;X)
+                            </p>
+                        </td>
+                        <td>
+                            <p class="para">
+                              Get a quick update or perform a quick task in the Today view of Notification Center
+                            </p>
+                            <p class="para">
+                              (A Today extension is called a <em>widget</em>)
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="para">
+                              Action (iOS and OS X; UI and non-UI variants)
+                            </p>
+                        </td>
+                        <td>
+                            <p class="para">
+                              Replace the iOS system keyboard with a custom keyboard for use in all apps
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="para">
+                              Action (iOS and OS X; UI and non-UI variants)
+                            </p>
+                        </td>
+                        <td>
+                            <p class="para">
+                              Get a quick update or perform a quick task in the Today view of Notification Center
+                            </p>
+                            <p class="para">
+                              (A Today extension is called a <em>widget</em>)
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
