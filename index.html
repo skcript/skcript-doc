@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+<div class="row">
+    <div class="col-sm-12">
+        <h2 class="Doc--Heading m-b-20"> Action Mailer – Easy email delivery and testing</h2>
+        <p class="Title-Content m-t-50">
+        Action Mailer is a framework for designing email service layers. These layers are used to consolidate code for sending out forgotten passwords, welcome wishes on signup, invoices for billing, and any other use case that requires a written notification to either a person or another system.
+        </p>
+        <p class="Title-Content">
+        Action Mailer is in essence a wrapper around Action Controller and the Mail gem. It provides a way to make emails using templates in the same way that Action Controller renders views using templates.
+        </p>
+        <p class="Title-Content">
+        Additionally, an Action Mailer class can be used to process incoming email, such as allowing a blog to accept new posts from an email (which could even have been sent from a phone).
+        </p>
+    </div>
+</div>
+<div class="notes gray-note">
+    <h3>Important</h3>
+    <p>Each app extension you create matches exactly one of the extension points listed in Table 1-1. You don’t create a generic extension that matches more than one extension point.</p>
+</div>
+
+<div class="row m-t-20">
+    <div class="col-sm-12">
+        <h4 class="Pre--Title">Sending emails</h4>
+        <p class="Pre--Content">
+        The framework works by initializing any instance variables you want to be available in the email template, followed by a call to <code>mail</code> to deliver the email.
+        </p>
+        <p class="Pre--Content">
+        This can be as simple as:
+        </p>
+                <pre class="m-t-20">
+                    <code>
+                    class Notifier &lt; ActionMailer::Base
+                      default from: &#39;system@loudthinking.com&#39;
+                        def welcome(recipient)
+                        @recipient = recipient
+                          mail(to: recipient,
+                          subject: &quot;[Signed up] Welcome #{recipient}&quot;)
+                      end
+                    end
+                    </code>
+</pre>
+        <p class="Pre--Content m-t-20">
+        The body of the email is created by using an Action View template (regular
+        <a href="#" class="link">ERB</a>) that has the
+        instance variables that are declared in the mailer action.
+        </p>
+        <div class="notes red-note">
+            <h3>Important</h3>
+            <p>Each app extension you create matches exactly one of the extension points listed in Table 1-1. You don’t create a generic extension that matches more than one extension point.</p>
+        </div>
+        <div class="notes info-note">
+            <h3>Important</h3>
+            <p>Each app extension you create matches exactly one of the extension points listed in Table 1-1. You don’t create a generic extension that matches more than one extension point.</p>
+        </div>
+        <p class="Pre--Content">
+        So the corresponding body template for the method above could look like
+        this:
+        </p>
+                <pre class="m-t-20">
+                    <code>
+                    class Notifier &lt; ActionMailer::Base
+                      default from: &#39;system@loudthinking.com&#39;
+                        def welcome(recipient)
+                        @recipient = recipient
+                          mail(to: recipient,
+                          subject: &quot;[Signed up] Welcome #{recipient}&quot;)
+                      end
+                    end
+                    </code>
+</pre>
+    </div>
+</div>
+<div class="row m-t-20">
+    <div class="col-sm-12">
+        <h4 class="Pre--Title">Download and installation</h4>
+        <p class="Pre--Content">
+        The latest version of Action Mailer can be installed with RubyGems:
+        </p>
+        <div class="notes green-note">
+            <h3>Important</h3>
+            <p>Each app extension you create matches exactly one of the extension points listed in Table 1-1. You don’t create a generic extension that matches more than one extension point.</p>
+        </div>
+<pre class="m-t-20"> <code>% [sudo] gem install actionmailer</code></pre>
+<p class="Pre--Content m-t-20">Source code can be downloaded as part of the Rails project on GitHub</p>
+        <ul class="Doc-ul">
+            <li>
+<p><a href="#" class="link">www.opensource.org/licenses/MIT</a></p>
+            </li>
+        </ul>
+    </div>
+</div>
