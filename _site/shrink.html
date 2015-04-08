@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>About</title>
+    <title>Shrink Documentation</title>
 
     <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
@@ -23,7 +23,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <!-- <link rel="canonical" href="http://yourdomain.com/about/">
+    <!-- <link rel="canonical" href="http://yourdomain.com/shrink.html">
     <link rel="alternate" type="application/rss+xml" title="Shrink Documentation" href="http://yourdomain.com/feed.xml" /> -->
 </head>
 
@@ -49,7 +49,7 @@
             <li class="">
                 <a href="index.html">Skcript</a>
             </li>
-            <li class="">
+            <li class="active">
                 <a href="shrink.html">Shrink</a>
             </li>
             <li>
@@ -75,22 +75,81 @@
 </nav>  
 
       <section id="page-wrapper" class="description">
-        <div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">About</h1>
-  </header>
-
-  <article class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
-
-<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
-
-<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
-
-  </article>
-
+        <div class="row">
+    <div class="col-sm-12">
+        <h2 class="Doc--Heading m-b-20"> Shrink</h2>
+        <p class="Title-Content m-t-50">
+        Action Mailer is a framework for designing email service layers. These layers are used to consolidate code for sending out forgotten passwords, welcome wishes on signup, invoices for billing, and any other use case that requires a written notification to either a person or another system.
+        </p>
+        <p class="Title-Content">
+        Action Mailer is in essence a wrapper around Action Controller and the Mail gem. It provides a way to make emails using templates in the same way that Action Controller renders views using templates.
+        </p>
+        <p class="Title-Content">
+        Additionally, an Action Mailer class can be used to process incoming email, such as allowing a blog to accept new posts from an email (which could even have been sent from a phone).
+        </p>
+    </div>
 </div>
+<div class="notes gray-note">
+    <h3>Important</h3>
+    <p>Each app extension you create matches exactly one of the extension points listed in Table 1-1. You don’t create a generic extension that matches more than one extension point.</p>
+</div>
+<div class="row m-t-20">
+    <div class="col-sm-12">
+        <h4 class="Pre--Title">Sending emails</h4>
+        <p class="Pre--Content">
+        The framework works by initializing any instance variables you want to be available in the email template, followed by a call to <code>mail</code> to deliver the email.
+        </p>
+        <p class="Pre--Content">
+        This can be as simple as:
+        </p>
+<pre class="m-t-20">
+<code>
+ class Notifier &lt; ActionMailer::Base
+  default from: &#39;system@loudthinking.com&#39;
+    def welcome(recipient)
+    @recipient = recipient
+      mail(to: recipient,
+      subject: &quot;[Signed up] Welcome #{recipient}&quot;)
+    end
+ end
+</code>
+</pre>
+        <p class="Pre--Content m-t-20">
+        The body of the email is created by using an Action View template (regular
+        <a href="#" class="link">ERB</a>) that has the
+        instance variables that are declared in the mailer action.
+        </p>
+        <div class="notes red-note">
+            <h3>Important</h3>
+            <p>Each app extension you create matches exactly one of the extension points listed in Table 1-1. You don’t create a generic extension that matches more than one extension point.</p>
+        </div>
+        <div class="notes info-note">
+            <h3>Important</h3>
+            <p>Each app extension you create matches exactly one of the extension points listed in Table 1-1. You don’t create a generic extension that matches more than one extension point.</p>
+        </div>
+        <p class="Pre--Content">
+        So the corresponding body template for the method above could look like
+        this:
+        </p>
+<pre class="m-t-20">
+<code>
+ class Notifier &lt; ActionMailer::Base
+   default from: &#39;system@loudthinking.com&#39;
+     def welcome(recipient)
+     @recipient = recipient
+       mail(to: recipient,
+       subject: &quot;[Signed up] Welcome #{recipient}&quot;)
+   end
+ end
+</code>
+</pre>
+    </div>
+</div>
+
+
+
+
+
 
         <footer class="m-t-50">
 <span class="copyright">Copyrights &copy; 2015 SkcriptHQ. All rights reserved.</span>
