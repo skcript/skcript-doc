@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>4Cast</title>
+
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:500,700,100,400,200,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body>
+    <div id="wrapper">
+
+      <!-- Navigation -->
+<nav id="menu" class="navbar navbar-inverse navbar-fixed-top menu" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">SKCRIPT DOC</a>
+    </div> 
+    <!-- Top Menu Items -->
+    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+            <li class="">
+                <a href="index.html">Skcript</a>
+            </li>
+            <li class="">
+                <a href="shrink.html">Shrink</a>
+            </li>
+            <li class="active">
+                <a href="4Cast.html">4Cast</a>
+            </li>
+            <li>
+                <a href="#"> Forms</a>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo"> Dropdown  Menu<i class="fa fa-fw fa-caret-down"></i></a>
+                <ol id="demo" class="drop collapse">
+                    <li>
+                        <a href="#">ata modal</a>
+                    </li>
+                    <li>
+                        <a href="#">Dropdown Item 2</a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <a href="#">Sony</a>
+            </li>
+            <li>
+                <a href="#">Startover</a>
+            </li>
+            <li>
+                <a href="#">Fail fast</a>
+            </li>
+            <li>
+                <a href="#">Upstream</a>
+            </li>
+            <li>
+                <a href="#">Sony</a>
+            </li>
+            <li>
+                <a href="#">Startover</a>
+            </li>
+            <li>
+                <a href="#">Fail fast</a>
+            </li>
+            <li>
+                <a href="#">Upstream</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>  
+
+      <section id="page-wrapper" class="description">
+        <div class="row">
+    <div class="col-sm-12">
+        <h2 class="Doc--Heading m-b-20"> 4Cast Understand How an App Extension Works</h2>
+        <p class="Title-Content m-t-50">
+            An app extension is not an app. It implements a specific, well scoped task that adheres to the policies defined by a particular extension point.
+        </p>
+    </div>
+</div>
+<div class="row m-t-20">
+    <div class="col-sm-12">
+        <h4 class="Pre--Title">An App Extension’s Life Cycle</h4>
+        <p class="Pre--Content">
+            Because an app extension is not an app, its life cycle and environment are different. In most cases, an extension launches when a user chooses it from an app’s UI or from a presented activity view controller. An app that a user employs to choose an app extension is called a host app. A host app defines the context provided to the extension and kicks off the extension life cycle when it sends a request in response to a user action. An extension typically terminates soon after it completes the request it received from the host app.
+        </p>
+        <p class="Pre--Content">
+            For example, imagine that a user selects some text in an OS X host app, activates the Share button, and chooses an app extension from the sharing list to help them post the text to a social sharing website. The host app responds to the user’s choice by issuing to the extension a request that contains the selected text. A generalized version of this situation is pictured in step 1 of Figure 2-1.
+        </p>
+
+        <Figure class="figure">
+            <span class="caption"> <strong>Figure 2-1</strong> The basic life cycle of an app extension</span>
+            <img src="images/lifecycle.png" alt="image: images/lifecycle.png" width="500" height="220">
+        </Figure>
+
+        <p class="Pre--Content">
+            In step 2 of Figure 2-1, the system instantiates the app extension identified in the host app’s request and sets up a communication channel between them. The extension displays its view within the context of the host app and then uses the items it received in the host app’s request to perform its task (in this example, the extension receives the selected text).
+        </p>
+        <p class="Pre--Content">
+            In step 3 of Figure 2-1, the user performs or cancels the task in the app extension and dismisses it. In response to this action, the extension completes the host app’s request by immediately performing the user’s task or, if necessary, initiating a background process to perform it. The host app tears down the extension’s view and the user returns to their previous context within the host app. When the extension’s task is finished, whether immediately or later, a result may be returned to the host app.
+        </p>
+        <p class="Pre--Content">
+            Shortly after the app extension performs its task (or starts a background session to perform it), the system terminates the extension, as shown in step 4.
+        </p>
+
+        <div class="notes green-note">
+            <h3>Important</h3>
+            <p>Each app extension you create matches exactly one of the extension points listed in Table 1-1. You don’t create a generic extension that matches more than one extension point.</p>
+        </div>
+        <p class="Pre--Content">
+        So the corresponding body template for the method above could look like
+        this:
+        </p>
+    </div>
+</div>
+
+<div class="row m-t-20">
+    <div class="col-sm-12">
+        <h4 class="Pre--Title">How an App Extension Communicates</h4>
+        <p class="Pre--Content">
+            An app extension communicates primarily with its host app, and does so in terms reminiscent of transaction processing: There is a request from the host and a response from the extension. Figure 2-2 shows a simplified view of the relationship between a running extension, the host app that launched it, and the containing app.
+        </p>
+
+        <Figure class="figure">
+            <span class="caption"> <strong>Figure 2-2</strong> An app extension communicates directly only with the host app</span>
+            <img src="images/communication.png" alt="image: communication.png" width="642" height="226">
+        </Figure>
+
+        <p class="Pre--Content">
+            There is no direct communication between an app extension and its containing app; typically, the containing app isn’t even running while a contained extension is running. An app extension’s containing app and the host app don’t communicate at all.
+        </p>
+        <p class="Pre--Content">
+            In a typical request/response transaction, the system opens an app extension on behalf of a host app, conveying data in an extension context provided by the host. The extension displays a user interface, performs some work, and, if appropriate for the extension’s purpose, returns data to the host.
+        </p>
+        <p class="Pre--Content">
+            The dotted line in Figure 2-2 represents the limited interaction available between an app extension and its containing app. A Today widget (and no other app extension type) can ask the system to open its containing app by calling the <a href=""> openURL:completionHandler: </a> method of the <a href=""> NSExtensionContext</a> class. As indicated by the Read/Write arrows in Figure 2-3, any app extension and its containing app can access shared data in a privately defined shared container. The full vocabulary of communication between an extension, its host app, and its containing app is shown in simple form in Figure 2-3.
+        </p>
+
+        <div class="notes green-note">
+            <h3>Important</h3>
+            <p>Each app extension you create matches exactly one of the extension points listed in Table 1-1. You don’t create a generic extension that matches more than one extension point.</p>
+        </div>
+        <p class="Pre--Content">
+        So the corresponding body template for the method above could look like
+        this:
+        </p>
+    </div>
+</div>
+<div class="row m-t-20">
+    <div class="col-sm-12">
+        <h4 class="Pre--Title">Understand Share Extensions</h4>
+        <p class="Pre--Content">
+            On both platforms, a Share extension should:
+        </p>
+        <ul class="Doc-ul">
+            <li><p>Make it easy for users to post content</p></li>
+            <li><p>Let users preview, edit, annotate, and configure content, if appropriate</p></li>
+            <li><p>Validate the user’s content before sending it</p></li>
+            <li><p>Make it easy for users to post content</p></li>
+            <li><p>Let users preview, edit, annotate, and configure content, if appropriate</p></li>
+            <li><p>Validate the user’s content before sending it</p></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row m-t-20 Footer--Link">
+    <div class="col-sm-6">
+        <a class="pull-left" href="shrink.html"><i class="fa fa-chevron-left"></i> &nbsp; Shrink</a>
+    </div>
+    <div class="col-sm-6">
+        <a class="pull-right" href="#">Forms &nbsp; <i class="fa fa-chevron-right"></i></a>
+    </div>
+</div>
+
+
+
+
+
+
+        <footer class="m-t-20">
+<span class="copyright">Copyrights &copy; 2015 SkcriptHQ. All rights reserved.</span>
+<a href=""><span class="terms">Terms of Use</span></a> | <a href=""><span class="policy">Privacy Policy</span></a> | <a href=""><span class="updated">Updated: 2015-03-09</span></a>
+
+</footer>
+      </section>
+    </div>
+
+    <!-- jQuery -->
+<script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/highlight.pack.js"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript" src="js/layout.js?v=5.0.1"></script>
+<script type="text/javascript" src="js/jquery.mmenu.min.all.js?v=5.0.1"></script>
+
+  </body>
+
+</html>

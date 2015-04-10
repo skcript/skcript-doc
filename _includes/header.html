@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top menu" role="navigation">
+<nav id="menu" class="navbar navbar-inverse navbar-fixed-top menu" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Shrink Doc</a>
+        <a class="navbar-brand" href="index.html">SKCRIPT DOC</a>
     </div> 
     <!-- Top Menu Items -->
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
@@ -20,22 +20,46 @@
             <li class="{% if page.url == '/shrink.html' %}active{% endif %}">
                 <a href="shrink.html">Shrink</a>
             </li>
-            <li>
-                <a href="#">4Cast</a>
+            <li class="{% if page.url == '/4Cast.html' %}active{% endif %}">
+                <a href="4Cast.html">4Cast</a>
             </li>
             <li>
                 <a href="#"> Forms</a>
             </li>
-            <li>
+            <li class="dropdown">
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"> Dropdown  Menu<i class="fa fa-fw fa-caret-down"></i></a>
-                <ul id="demo" class="collapse">
+                <ol id="demo" class="drop collapse">
                     <li>
-                        <a href="#">Dropdown Item 1</a>
+                        <a href="#">ata modal</a>
                     </li>
                     <li>
                         <a href="#">Dropdown Item 2</a>
                     </li>
-                </ul>
+                </ol>
+            </li>
+            <li>
+                <a href="#">Sony</a>
+            </li>
+            <li>
+                <a href="#">Startover</a>
+            </li>
+            <li>
+                <a href="#">Fail fast</a>
+            </li>
+            <li>
+                <a href="#">Upstream</a>
+            </li>
+            <li>
+                <a href="#">Sony</a>
+            </li>
+            <li>
+                <a href="#">Startover</a>
+            </li>
+            <li>
+                <a href="#">Fail fast</a>
+            </li>
+            <li>
+                <a href="#">Upstream</a>
             </li>
         </ul>
     </div>
